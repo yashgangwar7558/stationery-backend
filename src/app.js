@@ -7,7 +7,8 @@ const app = express();
 const port = process.env.PORT;
 
 app.use(express.json());
-app.use(cors({ origin: 'http://localhost:3000', credentials: true, exposedHeaders: ['Content-Length', 'X-Foo', 'X-Bar'], allowedHeaders: ['Content-Type', 'Authorization', 'multipart/form-data']}));
+// app.use(cors({ origin: 'http://localhost:3000', credentials: true, exposedHeaders: ['Content-Length', 'X-Foo', 'X-Bar'], allowedHeaders: ['Content-Type', 'Authorization', 'multipart/form-data']}));
+app.use(cors());
 
 // to ensure server connects to database before its live
 connectToMongoDB()
